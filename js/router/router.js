@@ -1,7 +1,8 @@
-import { home, about } from "../pages/index.js";
+import { home, about, memory } from "../pages/index.js";
 
 const routes = {
 	home,
+	memory,
 	about
 };
 
