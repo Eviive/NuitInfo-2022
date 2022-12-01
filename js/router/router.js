@@ -2,32 +2,43 @@ import routes from "./routes/index.js";
 
 const displayPage = (pathname) => {
 	const root = document.querySelector("#root");
+
+	const pageTransition = display => {
+		const animation = document.body.animate([
+			{ opacity: 1 },
+			{ opacity: 0 }
+		], {
+			duration: 300,
+			easing: "ease",
+			fill: "forwards"
+		});
+
+		animation.onfinish = () => {
+			animation.onfinish = null;
+			animation.reverse();
+
+			display(root);
+		};
+	};
 	
 	for (const r of Object.values(routes)) {
 		if (r.path.includes(pathname)) {
 			root.className = r.name;
-			r.display(root);
+			pageTransition(r.display);
 			return;
 		}
 	}
 
-	routes.home.display(root);
+	pageTransition(routes.home.display);
 };
 
 const addLinks = () => {
-	const links = document.createDocumentFragment();
+	const links = document.querySelectorAll("a");
 
-	for (const r of Object.values(routes)) {
-		const a = document.createElement("a");
-
-		a.href = r.path[0];
-
-		const { name } = r;
-		a.textContent = name.charAt(0).toUpperCase() + name.slice(1);
-
-		a.onclick = e => {
+	for (const link of links) {
+		link.onclick = e => {
 			e.preventDefault();
-	
+
 			const { pathname } = e.target;
 			
 			window.history.pushState(
@@ -38,16 +49,7 @@ const addLinks = () => {
 
 			displayPage(pathname);
 		};
-
-		const li = document.createElement("li");
-		li.appendChild(a);
-
-		links.appendChild(li);
 	}
-
-	const nav = document.querySelector("#nav-links");
-	
-	nav?.replaceChildren(links);
 };
 
 export const router = () => {
