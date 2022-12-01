@@ -1,9 +1,4 @@
-import { home, about } from "../pages/index.js";
-
-const routes = {
-	home,
-	about
-};
+import routes from "./routes/index.js";
 
 const displayPage = (pathname) => {
 	const root = document.querySelector("#root");
@@ -19,13 +14,20 @@ const displayPage = (pathname) => {
 	routes.home.display(root);
 };
 
-const addLinkEvents = () => {
-	const links = document.querySelectorAll("a");
-	
-	for (const l of links) {
-		l.addEventListener("click", e => {
-			e.preventDefault();
+const addLinks = () => {
+	const links = document.createDocumentFragment();
 
+	for (const r of Object.values(routes)) {
+		const a = document.createElement("a");
+
+		a.href = r.path[0];
+
+		const { name } = r;
+		a.textContent = name.charAt(0).toUpperCase() + name.slice(1);
+
+		a.onclick = e => {
+			e.preventDefault();
+	
 			const { pathname } = e.target;
 			
 			window.history.pushState(
@@ -35,12 +37,21 @@ const addLinkEvents = () => {
 			);
 
 			displayPage(pathname);
-		});
+		};
+
+		const li = document.createElement("li");
+		li.appendChild(a);
+
+		links.appendChild(li);
 	}
+
+	const nav = document.querySelector("#nav-links");
+	
+	nav?.replaceChildren(links);
 };
 
 export const router = () => {
-	addLinkEvents();
+	addLinks();
 	
 	displayPage(window.location.pathname);
 	
