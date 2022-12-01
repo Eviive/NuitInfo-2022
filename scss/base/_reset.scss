@@ -32,7 +32,8 @@ html {
 
 		--secondary-1: 30deg, 3%, 14%;
 		--secondary-2: 0deg, 0%, 25%;
-		--secondary-3: 240deg, 24%, 94%;
+		--secondary-3: 0deg, 0%, 30%;
+		--secondary-4: 240deg, 24%, 94%;
 		
 		--error: 0deg, 100%, 50%;
 		--hyperlink: 219deg, 87%, 58%;
@@ -43,9 +44,12 @@ html {
 		display: flex;		
 		flex-direction: column;
 
+		color: white;
 		font-size: 16px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+
+		background-color: hsl(var(--secondary-1));
 
 		&:has(.no-scroll) {
 			overflow-y: hidden;
