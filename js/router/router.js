@@ -10,6 +10,7 @@ const displayPage = (pathname) => {
 	
 	for (const r of Object.values(routes)) {
 		if (r.path.includes(pathname)) {
+			root.className = r.name;
 			r.display(root);
 			return;
 		}
