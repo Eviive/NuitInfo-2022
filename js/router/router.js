@@ -1,30 +1,42 @@
-import { home, about, memory } from "../pages/index.js";
-
-const routes = {
-	home,
-	memory,
-	about
-};
+import routes from "./routes/index.js";
 
 const displayPage = (pathname) => {
 	const root = document.querySelector("#root");
+
+	const pageTransition = display => {
+		const animation = document.body.animate([
+			{ opacity: 1 },
+			{ opacity: 0 }
+		], {
+			duration: 300,
+			easing: "ease",
+			fill: "forwards"
+		});
+
+		animation.onfinish = () => {
+			animation.onfinish = null;
+			animation.reverse();
+
+			display(root);
+		};
+	};
 	
 	for (const r of Object.values(routes)) {
 		if (r.path.includes(pathname)) {
 			root.className = r.name;
-			r.display(root);
+			pageTransition(r.display);
 			return;
 		}
 	}
 
-	routes.home.display(root);
+	pageTransition(routes.home.display);
 };
 
-const addLinkEvents = () => {
+const addLinks = () => {
 	const links = document.querySelectorAll("a");
-	
-	for (const l of links) {
-		l.addEventListener("click", e => {
+
+	for (const link of links) {
+		link.onclick = e => {
 			e.preventDefault();
 
 			const { pathname } = e.target;
@@ -36,12 +48,12 @@ const addLinkEvents = () => {
 			);
 
 			displayPage(pathname);
-		});
+		};
 	}
 };
 
 export const router = () => {
-	addLinkEvents();
+	addLinks();
 	
 	displayPage(window.location.pathname);
 	
