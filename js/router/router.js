@@ -4,7 +4,7 @@ const displayPage = (pathname) => {
 	const root = document.querySelector("#root");
 
 	const pageTransition = display => {
-		const animation = document.body.animate([
+		const animation = root.animate([
 			{ opacity: 1 },
 			{ opacity: 0 }
 		], {
@@ -36,10 +36,10 @@ const addLinks = () => {
 	const links = document.querySelectorAll("a");
 
 	for (const link of links) {
+		const pathname = link.pathname;
+		
 		link.onclick = e => {
 			e.preventDefault();
-
-			const { pathname } = e.target;
 			
 			window.history.pushState(
 				{},
