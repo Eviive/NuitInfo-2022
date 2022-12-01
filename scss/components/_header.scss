@@ -1,42 +1,10 @@
 @use "../abstracts" as *;
 
 header {
-	padding: 1em;
-	display: flex;
-	align-items: center;
-	gap: 2em;
+	padding: 1.5em;
 	
-	.logo {
-		max-width: 300px;
-		display: flex;
-		
-		img {
-			@include size;
-		}
-	}
-
-	nav {
-		#nav-links {
-			display: flex;
-			gap: 1.5em;
-			
-			li {
-				display: flex;
-				
-				a {
-					padding: .5em 1em;
-					border-radius: 8px;
-					transition: background-color .3s ease, scale .3s ease;
-
-					&:hover {
-						background-color: hsl(var(--secondary-3));
-					}
-
-					&:active {
-						scale: .95;
-					}
-				}
-			}
-		}
+	h1 {
+		font-size: 1.75em;
+		text-align: center;
 	}
 }
