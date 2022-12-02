@@ -1,3 +1,55 @@
 #root.home {
-	
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: justify;
+    
+    .grid-container {
+        width: min(90%, 100ch);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: space-between;
+        padding: 0 5em;
+        gap : 3em;
+    
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 1em 0;
+    }
+
+    li {
+        list-style: none;
+        font-size: 1.5em;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    h2{
+        transition: all 0.2s ease-in-out;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        margin: 1em 0;
+
+        &::after,
+        &::before {
+            content: " - ";
+        }
+
+        &:hover {
+            color: hsl(var(--primary-1));
+        }
+    }
+
 }

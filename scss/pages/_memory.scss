@@ -1,0 +1,95 @@
+#root.memory {
+	padding: 0 4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+	.cards-container {
+		display: flex;
+		justify-content: center;
+		gap: 2em;
+		flex-wrap: wrap;
+
+		.card {
+			&.flipped {
+				background-color: green;
+			}
+		}
+	}
+
+	.commands-container {
+		padding: 3em 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em 0;
+		
+		.command-item {
+			flex: 0 0 50%;
+			display: flex;
+			justify-content: center;
+			
+			&.rounds-counter {
+
+			}
+			
+			&.shuffle-wrapper {
+				button{
+					border-radius: 10px;
+					padding: 20px 40px;
+					background-color: rgb(85, 84, 84);
+					border: none;
+					transition: all 0.2s ease-in-out;
+					&:hover {
+						scale: 1.1;
+						filter: invert(1);
+					}
+
+					&:active {
+						animation: alternate shake 2s;
+					}
+
+
+				}
+			}
+		}
+	}
+
+	@keyframes shake {
+		0% {
+			transform: translate(1px, 1px) rotate(0deg);
+		}
+		10% {
+			transform: translate(-1px, -2px) rotate(-1deg);
+		}
+		20% {
+			transform: translate(-3px, 0px) rotate(1deg);
+		}
+		30% {
+			transform: translate(3px, 2px) rotate(0deg);
+		}
+		40% {
+			transform: translate(1px, -1px) rotate(1deg);
+		}
+		50% {
+			transform: translate(-1px, 2px) rotate(-1deg);
+		}
+		60% {
+			transform: translate(-3px, 1px) rotate(0deg);
+		}
+		70% {
+			transform: translate(3px, 1px) rotate(-1deg);
+		}
+		80% {
+			transform: translate(-1px, -1px) rotate(1deg);
+		}
+		90% {
+			transform: translate(1px, 2px) rotate(0deg);
+		}
+		100% {
+			transform: translate(1px, -2px) rotate(-1deg);
+		}
+	}
+}

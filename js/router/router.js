@@ -1,32 +1,45 @@
-import { home, about } from "../pages/index.js";
+import routes from "./routes/index.js";
 
-const routes = {
-	home,
-	about
-};
-
-const displayPage = (pathname) => {
+const displayPage = pathname => {
 	const root = document.querySelector("#root");
+
+	const pageTransition = (display, className) => {
+		const animation = root.animate([
+			{ opacity: 1 },
+			{ opacity: 0 }
+		], {
+			duration: 300,
+			easing: "ease",
+			fill: "forwards"
+		});
+
+		animation.onfinish = () => {
+			animation.onfinish = null;
+			animation.reverse();
+			
+			root.className = className;
+			display(root);
+		};
+	};
 	
 	for (const r of Object.values(routes)) {
 		if (r.path.includes(pathname)) {
-			root.className = r.name;
-			r.display(root);
+			pageTransition(r.display, r.name);
 			return;
 		}
 	}
 
-	routes.home.display(root);
+	pageTransition(routes.home.display);
 };
 
-const addLinkEvents = () => {
+const addLinks = () => {
 	const links = document.querySelectorAll("a");
-	
-	for (const l of links) {
-		l.addEventListener("click", e => {
-			e.preventDefault();
 
-			const { pathname } = e.target;
+	for (const link of links) {
+		const pathname = link.pathname;
+		
+		link.onclick = e => {
+			e.preventDefault();
 			
 			window.history.pushState(
 				{},
@@ -35,18 +48,16 @@ const addLinkEvents = () => {
 			);
 
 			displayPage(pathname);
-		});
+		};
 	}
 };
 
 export const router = () => {
-	addLinkEvents();
+	addLinks();
 	
 	displayPage(window.location.pathname);
 	
-	window.onpopstate = e => {
-		console.log(e);
-
+	window.onpopstate = () => {
 		displayPage(window.location.pathname);
 	};
 };

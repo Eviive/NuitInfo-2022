@@ -1,5 +1,19 @@
 @use "../abstracts" as *;
 
 header {
+	padding: 1.5em;
+	display: flex;
+	justify-content: center;
+
+	background-color: #151514;
 	
+	h1 {
+		width: fit-content;
+		font-size: 1.75em;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			letter-spacing: 2px;
+			scale: 1.1;
+		}
+	}
 }

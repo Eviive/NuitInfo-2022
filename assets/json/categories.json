@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Maladie",
+        "icon": "assets/images/disease.svg"
+    },
+
+    {
+        "id": 2,
+        "name": "Medical",
+        "icon": "assets/images/sante.png"
+    },
+
+    {
+        "id": 3,
+        "name": "Sexualité",
+        "icon": "assets/images/sexualite.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Protection",
+        "icon": "assets/images/protection.svg"
+    },
+
+    {
+        "id": 5,
+        "name": "Infos en vrac",
+        "icon": "assets/images/infos.png"
+    }
+]

@@ -1,0 +1,475 @@
+[
+    {
+		"id": 1,
+        "name": "Sida (VIH)",
+        "category": 1,
+		"icon": "assets/images/sida.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que le Sida ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "Maladie très grave d'origine virale, caractérisée par une chute brutale des défenses immunitaires de l'organisme."
+            }
+        ]
+    },
+
+    {
+		"id": 2,
+        "name": "Herpès",
+        "category": 1,
+		"icon": "assets/images/herpes.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que l'Herpès ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "Affection de la peau et des muqueuses d'origine virale, caractérisée par une éruption de vésicules, passagère mais pouvant être suivie de récurrences pendant des années."
+            }
+        ]
+    },
+
+    {
+		"id": 3,
+        "name": "Papillomavirus (PVH)",
+        "category": 1,
+		"icon": "assets/images/papillomavirus.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que le Papillomavirus ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "Virus responsable d'affections de la peau et des muqueuses."
+            }
+        ]
+    },
+    {
+		"id": 4,
+        "name": "Syphilis",
+        "category": 1,
+		"icon": "assets/images/syphilis.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que la Syphilis ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "La syphilis est une maladie sexuellement transmissible et très contagieuse. La maladie se manifeste d'abord par un chancre au niveau des organes génitaux, puis par des atteintes des nerfs et des viscères."
+            }
+        ]
+    },
+    {
+		"id": 5,
+        "name": "Mycose génitale",
+        "category": 1,
+		"icon": "assets/images/mycose.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que la mycose génitale ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "Infection contagieuse causant démangeaisons intenses, sécrétions blanchâtres ou encore sensations de brûlure."
+            }
+        ]
+    },
+    {
+		"id": 6,
+        "name": "Chlamydiose",
+        "category": 1,
+		"icon": "assets/images/chlamydiose.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Qu'est-ce que la Chlamydiose ?"
+            },
+            {
+                "title": "Définition:",
+                "content": "Infection génitale hautes  provoquant chez la femme, une stérilité, une grossesse extra-utérine et l'atteinte du nouveau-né si la mère est infectée."
+            }
+        ]
+    },
+
+    {
+		"id": 7,
+        "name": "Meilleur protection",
+        "category": 4,
+		"icon": "assets/images/protection.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quels est le meilleur moyen de se protéger contre les IST ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "La protection n°1 reste le préservatif (féminin comme masculin), mais attention, elle ne reste cependant pas fiable à hauteur de 100%."
+            }
+        ]
+    },
+    {
+		"id": 8,
+        "name": "Cunnilingus",
+        "category": 4,
+		"icon": "assets/images/cunnilingus.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quels sont les risques lors d’un cunnilingus ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Le cunnilingus n'est pas une pratique à risque pour le VIH mais peut transmettre certaines IST comme la syphilis à la personne qui le fait"
+            }
+        ]
+    },
+
+    {
+		"id": 9,
+        "name": "Craquage",
+        "category": 4,
+		"icon": "assets/images/craquage.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Le préservatif a craqué. Que faire ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "En cas de rupture de préservatif pendant le rapport sexuel, il existe des risques de transmission si l'un des deux partenaires a le VIH et que sa charge virale n'est pas indétectable."
+            }
+        ]
+    },
+
+    {
+		"id": 10,
+        "name": "Fellation",
+        "category": 4,
+		"icon": "assets/images/fellation.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quels sont les risques lors d’une fellation ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "La fellation peut comporter un risque de transmission pour le VIH si la personne l'a recevant est porteur du virus, comme pour d'autres IST."
+            }
+        ]
+    },
+    {
+		"id": 11,
+        "name": "Rapport non protégé",
+        "category": 4,
+		"icon": "assets/images/rapport.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "J'ai fait un rapport non protégé, quels sont les risques ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Un rapport non protégé présente le risque le plus élevé de transmission."
+            }
+        ]
+    },
+    {
+		"id": 12,
+        "name": "Transmission",
+        "category": 4,
+		"icon": "assets/images/transmission.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "La transmission est-elle systématique ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Lors d'un rapport sexuel non protégé avec un(e) partenaire porteur(se) du virus VIH, la transmission du VIH n'est pas systématique et peut subvenir après plusieurs rapports."
+            }
+        ]
+    },
+
+    {
+		"id": 13,
+        "name": "Être atteint",
+        "category": 2,
+		"icon": "assets/images/atteint.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Comment savoir si on est atteint d'une IST ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Une IST peut provoquer certains symptomes (brûlures, pertes et boutons au niveau des parties génitales). Pour être sûr, il est hautement conseillé de faire un diagnostic ou un test de dépistage."
+            }
+        ]
+    },
+    {
+		"id": 14,
+        "name": "Vaccins",
+        "category": 2,
+		"icon": "assets/images/vaccins.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Existe t-il des vaccins contre les IST ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Il existe effectivement des vaccins pour l'hépatite B et l'HPV qui engendre des cancers et des condylomes mais toujours pas contre l'Hépatite C ou le VIH."
+            }
+        ]
+    },
+    {
+		"id": 15,
+        "name": "Règles",
+        "category": 2,
+		"icon": "assets/images/regles.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Comment faire quand j'ai mes règles ? "
+            },
+            {
+                "title": "Réponse:",
+                "content": "Si c'est la première fois, s'assurer d'en parler à une personne de confiance comme sa mère. Pour se protéger des pertes, vous pouvez utiliser des serviettes hygièniques, des coupes ou des culottes menstruelles."
+            }
+        ]
+    },
+    {
+		"id": 16,
+        "name": "Moustiques",
+        "category": 2,
+		"icon": "assets/images/moustiques.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Les moustiques peuvent-ils transmettre le VIH ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Un moustique ne peut pas transmettre le VIH car il aspire le sang d’une personne. Il n’injecte pas de sang à une autre personne."
+            }
+        ]
+    },
+    {
+		"id": 17,
+        "name": "Pire IST",
+        "category": 2,
+		"icon": "assets/images/pire-ist.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quel est l'IST la plus grave ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": " Cent fois plus contagieux que le virus du sida, le virus de l’hépatite B fait partie des dix virus les plus meurtriers au monde."
+            }
+        ]
+    },
+    {
+		"id": 18,
+        "name": "Mortalité",
+        "category": 2,
+		"icon": "assets/images/mortalite.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quelles IST sont mortelles ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Les IST peuvent bien être mortelles tel que le papillomavirus, herpès néonatal, syphilis ou l'hépatite B"
+            }
+        ]
+    },
+    {
+		"id": 19,
+        "name": "Soins et traitement",
+        "category": 2,
+		"icon": "assets/images/soins.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quelles sont les soins et traitements du VIH ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Il est possible d'avoir une charge virale indétectable si on est atteint du VIH grâce à un traitement (thérapie antirétrovirale). Il est aussi possible de prendre un médicament nommé prophylaxie pré-exposition (”PrEP”) si l’on est séronégative."
+            }
+        ]
+    },
+
+    {
+		"id": 20,
+        "name": "Nudes",
+        "category": 3,
+		"icon": "assets/images/nudes.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Les nudes, c'est quoi ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Un nude est une photo de soi-même qu’on prend avec son smartphone, en étant nu ou partiellement dénudé. L’envoi de nude est pour la plupart réalisé au sein d’un couple, dans un cadre intime, mais peut présenter un danger s'il celui-ci se voit dilvuguer."
+            }
+        ]
+    },
+    {
+		"id": 21,
+        "name": "Première fois",
+        "category": 3,
+		"icon": "assets/images/premiere-fois.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Comment faire pour sa première fois ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": " Il est recommandé de le faire avec une personne de confiance, avec qui on est à l'aise et que les 2 partenaires communiquent et se sentent prêts."
+            }
+        ]
+    },
+    {
+		"id": 22,
+        "name": "Parler sexualité",
+        "category": 3,
+		"icon": "assets/images/sexualite.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Est-ce qu'on peut parler de sexe avec tout le monde ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Il faut rester ouvert, avec certaines limites afin de garder une pudeur et entretenir des relations saines avec notre entourage."
+            }
+        ]
+    },
+    {
+		"id": 23,
+        "name": "Début",
+        "category": 3,
+		"icon": "assets/images/debut.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "À quel âge on devrait commencer à s'y intéresser ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "La sensibilisation aux maladies sexuellement transmissibles devrait commencer tôt, afin d’encadrer la puberté des adolescents."
+            }
+        ]
+    },
+    {
+		"id": 24,
+        "name": "Virginité",
+        "category": 3,
+		"icon": "assets/images/virginite.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "C'est quoi, la virginité ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Être vierge, ou puceau pour les garçons, est le fait de ne jamais avoir eu de relation sexuelle. Certains disent que c'est comme une honte, mais voyez cela en revanche comme un honneur de se préserver pour la bonne personne."
+            }
+        ]
+    },
+
+    {
+		"id": 25,
+        "name": "Test",
+        "category": 5,
+		"icon": "assets/images/test.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Comment faire un test du VIH ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Le test de dépistage du VIH peut se faire de différentes façons et à différents moments comme l'autotest qui se se pratique en toute autonomie, le Test Rapide d’Orientation Diagnostique réalisé par des associations ou des services médicaux, ou encore le dépistage par prise de sang étant un examen biologique."
+            }
+        ]
+    },
+    {
+		"id": 26,
+        "name": "Gratuité des préservatifs",
+        "category": 5,
+		"icon": "assets/images/gratuite.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Où peut-on avoir des préservatifs gratuitement ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Les préservatifs sont gratuits dans les centres de planning familial et dans certains sites web, mais généralement pas dans les pharmacies."
+            }
+        ]
+    },
+    {
+		"id": 27,
+        "name": "Lubrifiant",
+        "category": 5,
+		"icon": "assets/images/lubrifiant.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Quels genre de lubrifiant faut-il acheter ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Il est conseillé d'utiliser des lubrifiants à base d’eau et de silicone lorsqu’on utilise un préservatif afin de ne pas le fragiliser."
+            }
+        ]
+    },
+    {
+		"id": 28,
+        "name": "Gynécologue",
+        "category": 5,
+		"icon": "assets/images/gynécologue.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Un ou une gynécologue peut-il fournir un dépistage ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Un ou une gynécologue peut faire un dépistage par frottis pour les IST comme la chlamydia ou l’HPV."
+            }
+        ]
+    },
+
+    {
+		"id": 29,
+        "name": "Temps d'attente",
+        "category": 5,
+		"icon": "assets/images/temps.svg",
+        "cards": [
+            {
+                "title": "Question:",
+                "content": "Puis-je directement faire un test de dépistage du VIH après une relation sexuelle non protégée ?"
+            },
+            {
+                "title": "Réponse:",
+                "content": "Il faut attendre 6 semaines après la prise de risque (relation sexuelle non protégée, partage d’une seringue) pour faire un dépistage classique (prise de sang) et 3 mois pour un autotest ou un test rapide."
+            }
+        ]
+    }
+]
