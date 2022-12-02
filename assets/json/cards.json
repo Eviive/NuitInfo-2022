@@ -20,7 +20,7 @@
 		"id": 2,
         "name": "Herpès",
         "category": 1,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/herpes.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -37,7 +37,7 @@
 		"id": 3,
         "name": "Papillomavirus (PVH)",
         "category": 1,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/papillomavirus.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -53,7 +53,7 @@
 		"id": 4,
         "name": "Syphilis",
         "category": 1,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/syphilis.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -69,7 +69,7 @@
 		"id": 5,
         "name": "Mycose génitale",
         "category": 1,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/mycose.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -85,7 +85,7 @@
 		"id": 6,
         "name": "Chlamydiose",
         "category": 1,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/chlamydiose.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -102,7 +102,7 @@
 		"id": 7,
         "name": "Meilleur protection",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/protection.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -118,7 +118,7 @@
 		"id": 8,
         "name": "Cunnilingus",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/cunnilingus.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -135,7 +135,7 @@
 		"id": 9,
         "name": "Craquage",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/craquage.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -152,7 +152,7 @@
 		"id": 10,
         "name": "Fellation",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/fellation.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -168,7 +168,7 @@
 		"id": 11,
         "name": "Rapport non protégé",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/rapport.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -184,7 +184,7 @@
 		"id": 12,
         "name": "Transmission",
         "category": 4,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/transmission.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -201,7 +201,7 @@
 		"id": 13,
         "name": "Être atteint",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/atteint.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -217,7 +217,7 @@
 		"id": 14,
         "name": "Vaccins",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/vaccins.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -233,7 +233,7 @@
 		"id": 15,
         "name": "Règles",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/regles.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -249,7 +249,7 @@
 		"id": 16,
         "name": "Moustiques",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/moustiques.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -265,7 +265,7 @@
 		"id": 17,
         "name": "Pire IST",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/pire-ist.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -281,7 +281,7 @@
 		"id": 18,
         "name": "Mortalité",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/mortalite.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -297,7 +297,7 @@
 		"id": 19,
         "name": "Soins et traitement",
         "category": 2,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/soins.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -314,7 +314,7 @@
 		"id": 20,
         "name": "Nudes",
         "category": 3,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/nudes.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -330,7 +330,7 @@
 		"id": 21,
         "name": "Première fois",
         "category": 3,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/premiere-fois.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -346,7 +346,7 @@
 		"id": 22,
         "name": "Parler sexualité",
         "category": 3,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/sexualite.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -362,7 +362,7 @@
 		"id": 23,
         "name": "Début",
         "category": 3,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/debut.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -378,7 +378,7 @@
 		"id": 24,
         "name": "Virginité",
         "category": 3,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/virginite.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -395,7 +395,7 @@
 		"id": 25,
         "name": "Test",
         "category": 5,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/test.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -411,7 +411,7 @@
 		"id": 26,
         "name": "Gratuité des préservatifs",
         "category": 5,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/gratuite.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -427,7 +427,7 @@
 		"id": 27,
         "name": "Lubrifiant",
         "category": 5,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/lubrifiant.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -443,7 +443,7 @@
 		"id": 28,
         "name": "Gynécologue",
         "category": 5,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/gynécologue.svg",
         "cards": [
             {
                 "title": "Question:",
@@ -460,7 +460,7 @@
 		"id": 29,
         "name": "Temps d'attente",
         "category": 5,
-		"icon": "assets/images/sida.svg",
+		"icon": "assets/images/temps.svg",
         "cards": [
             {
                 "title": "Question:",

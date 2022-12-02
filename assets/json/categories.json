@@ -8,24 +8,24 @@
     {
         "id": 2,
         "name": "Medical",
-        "icon": "assets/images/disease.svg"
+        "icon": "assets/images/sante.png"
     },
 
     {
         "id": 3,
         "name": "Sexualité",
-        "icon": "assets/images/disease.svg"
+        "icon": "assets/images/sexualite.png"
     },
 
     {
         "id": 4,
         "name": "Protection",
-        "icon": "assets/images/disease.svg"
+        "icon": "assets/images/protection.svg"
     },
 
     {
         "id": 5,
         "name": "Infos en vrac",
-        "icon": "assets/images/disease.svg"
+        "icon": "assets/images/infos.png"
     }
 ]
