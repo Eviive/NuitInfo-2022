@@ -1,0 +1,40 @@
+#root.memory {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.cards-container {
+		flex-grow: 1;
+
+		.card {
+			&.flipped {
+				background-color: green;
+			}
+		}
+	}
+
+	.commands-container {
+		padding: 3em 5em;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em 0;
+		flex-wrap: wrap;
+		
+		.command-item {
+			flex: 0 0 50%;
+			min-width: 250px;
+			display: flex;
+			justify-content: center;
+			
+			&.rounds-counter {
+
+			}
+			
+			&.shuffle-wrapper {
+
+			}
+		}
+	}
+}

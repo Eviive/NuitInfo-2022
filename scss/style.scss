@@ -7,7 +7,8 @@
 	position: absolute;
 	top: 50%;
 	translate: 0 -50%;
-	@include size(40px);
+	padding: 5px;
+	@include size(50px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
