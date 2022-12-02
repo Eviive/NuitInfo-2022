@@ -1,3 +1,27 @@
+@use "abstracts" as *;
 @use "base";
 @use "components";
 @use "pages";
+
+.link {
+	position: absolute;
+	top: 50%;
+	translate: 0 -50%;
+	padding: 5px;
+	@include size(50px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	&.left {
+		left: 1em;
+	}
+
+	&.right {
+		right: 1em;
+	}
+
+	img {
+		@include size;
+	}
+}
