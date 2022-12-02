@@ -1,9 +1,10 @@
 class Card extends HTMLElement {
-	constructor(){
+
+	constructor() {
 		super();
 	}
 
-	connectedCallback(){
+	connectedCallback() {
 
 		const background = document.createElement("div");
 
@@ -75,19 +76,16 @@ class Card extends HTMLElement {
 		});
 
 		*/
-
-		this.addEventListener('click',() => {
-			this.classList.toggle('flip');
-		});
 	}
 
-	open(){
+	open() {
 		this.classList.remove('flip');
 	}
 
-	close(){
-		this.classList.open('flip');
+	close() {
+		this.classList.add('flip');
 	}
+
 }
 
 customElements.define('card-custom', Card);
