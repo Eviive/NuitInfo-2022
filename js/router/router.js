@@ -1,10 +1,10 @@
 import routes from "./routes/index.js";
 
-const displayPage = (pathname) => {
+const displayPage = pathname => {
 	const root = document.querySelector("#root");
 
-	const pageTransition = display => {
-		const animation = document.body.animate([
+	const pageTransition = (display, className) => {
+		const animation = root.animate([
 			{ opacity: 1 },
 			{ opacity: 0 }
 		], {
@@ -16,15 +16,15 @@ const displayPage = (pathname) => {
 		animation.onfinish = () => {
 			animation.onfinish = null;
 			animation.reverse();
-
+			
+			root.className = className;
 			display(root);
 		};
 	};
 	
 	for (const r of Object.values(routes)) {
 		if (r.path.includes(pathname)) {
-			root.className = r.name;
-			pageTransition(r.display);
+			pageTransition(r.display, r.name);
 			return;
 		}
 	}
@@ -36,10 +36,10 @@ const addLinks = () => {
 	const links = document.querySelectorAll("a");
 
 	for (const link of links) {
+		const pathname = link.pathname;
+		
 		link.onclick = e => {
 			e.preventDefault();
-
-			const { pathname } = e.target;
 			
 			window.history.pushState(
 				{},
@@ -57,9 +57,7 @@ export const router = () => {
 	
 	displayPage(window.location.pathname);
 	
-	window.onpopstate = e => {
-		console.log(e);
-
+	window.onpopstate = () => {
 		displayPage(window.location.pathname);
 	};
 };
