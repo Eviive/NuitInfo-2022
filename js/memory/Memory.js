@@ -9,6 +9,7 @@ export class Memory {
 
 	#cards;
 	#flippedCards = [];
+	#newCards = [];
 	
 	#nbCards;
 	#counter = 0;
@@ -75,48 +76,49 @@ export class Memory {
 		return cards;
 	}
 
-	#flipCard(card) {
-		if (this.#flippedCards.length >= 2) {
+	async #flipCard(card) {
+
+		this.#newCards.push(card);
+		card.open();
+		if (this.#newCards.length != 2) {
 			return;
 		}
+		this.#rounds++;
+		this.#updateUI();
 
-		card.open();
+		const firstCard = this.#newCards[0];
+		const secondCard = this.#newCards[1];
+		this.#newCards = [];
 
-		this.#flippedCards.push(card);
+		if (firstCard.dataset.id !== secondCard.dataset.id){
 
-		if (this.#flippedCards.length === 2) {
-			this.#rounds++;
-			this.#updateUI();
-
-			const firstCard = this.#flippedCards[0];
-			const secondCard = this.#flippedCards[1];
 			
-			if (firstCard.dataset.id === secondCard.dataset.id) {
-				this.#flippedCards = [];
-				this.#counter++;
+			await new Promise((resolve) => setTimeout(resolve, 1000))
+				.then(() => {
 
-				if (this.#hasWon()) {
-					this.#win();
-				}
-			} else {
-				setTimeout(() => {
 					firstCard.close();
+					secondCard.close();
+					
 					firstCard.addEventListener("click", () => {
 						this.#flipCard(firstCard);
-					}, { once: true });
+					},
+					{ once: true });
 					
-					secondCard.close();
+					
 					secondCard.addEventListener("click", () => {
 						this.#flipCard(secondCard);
-					}, { once: true });
-
-					this.#flippedCards = [];
-				}, 1000);
+					},
+					{ once: true });
+				});
+				
+				return
 			}
-		} else {
-			card.addEventListener("click", () => {
-				this.#flipCard(card);
-			}, { once: true });
+			
+		this.#flippedCards.push(firstCard);
+		this.#flippedCards.push(secondCard);
+
+		if (this.#hasWon()) {
+			this.#win();
 		}
 	}
 
@@ -125,7 +127,7 @@ export class Memory {
 	}
 	
 	#hasWon() {
-		return this.#counter === this.#nbCards;
+		return this.#flippedCards.length === this.#cards.length;
 	}
 
 	#win() {

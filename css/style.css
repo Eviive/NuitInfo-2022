@@ -141,7 +141,7 @@ card-custom .card-background {
 }
 card-custom .card-background img {
   height: 100%;
-  margin: 0 auto;
+  object-fit: fill;
 }
 
 card-custom.flip .card-front {
@@ -204,6 +204,7 @@ card-custom.flip .card-background {
   align-items: center;
 }
 #root.memory .cards-container {
+  width: min(90%, 100em);
   display: flex;
   justify-content: center;
   gap: 2em;
