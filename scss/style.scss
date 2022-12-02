@@ -14,14 +14,18 @@
 	align-items: center;
 	
 	&.left {
+		transition: all 0.2s ease-in-out;
 		left: 1em;
-	}
-
-	&.right {
-		right: 1em;
-	}
-
-	img {
-		@include size;
+		background-color: rgb(85, 84, 84);
+		border-radius: 50%;
+		padding: 10px;
+		&:hover {
+			scale: 1.1;
+			filter: invert(1);
+		}
+		
+		img {
+			@include size;
+		}
 	}
 }
