@@ -99,19 +99,24 @@ export class Memory {
 	#generateCards() {
 		this.#cards = this.#selectCards();
 		this.#container.replaceChildren(...this.#cards);
+		this.#flippedCards = [];
+		this.#counter = 0;
+		this.#rounds = 0;
+		this.#updateUI();
 	}
 
 	#createCardElement(category, id, card) {
-		const cardElement = document.createElement("div");
-
-		cardElement.classList.add("card");
+		const cardElement = document.createElement("card-custom");
+		
 		cardElement.dataset.id = id;
-
-		cardElement.textContent = `${category.name} - ${card.title} - ${card.content}`;
+		cardElement.setAttribute("identity", "assets/images/sida.svg");
+		cardElement.setAttribute("type", "assets/images/disease.svg");
+		cardElement.setAttribute("title", card.title);
+		cardElement.setAttribute("content", card.content);
 		
 		cardElement.addEventListener("click", () => {
 			this.#flipCard(cardElement);
-		});
+		}, { once: true });
 		
 		return cardElement;
 	}
@@ -143,7 +148,7 @@ export class Memory {
 			return;
 		}
 
-		card.classList.add("flipped");
+		card.open();
 
 		this.#flippedCards.push(card);
 
@@ -163,11 +168,23 @@ export class Memory {
 				}
 			} else {
 				setTimeout(() => {
-					firstCard.classList.remove("flipped");
-					secondCard.classList.remove("flipped");
+					firstCard.close();
+					firstCard.addEventListener("click", () => {
+						this.#flipCard(firstCard);
+					}, { once: true });
+					
+					secondCard.close();
+					secondCard.addEventListener("click", () => {
+						this.#flipCard(secondCard);
+					}, { once: true });
+
 					this.#flippedCards = [];
 				}, 1000);
 			}
+		} else {
+			card.addEventListener("click", () => {
+				this.#flipCard(card);
+			}, { once: true });
 		}
 	}
 
