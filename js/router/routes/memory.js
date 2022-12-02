@@ -1,32 +1,46 @@
+import { Memory } from "../../memory/Memory.js";
+
 const display = root => {
-	const section = document.createElement("section");
-    //add a div to the section
-    const divContenu = document.createElement("div");
-    section.appendChild(divContenu);
+	const content = document.createDocumentFragment();
+	
+	/*************** Cards container ***************/
+	
+	const cardsContainer = document.createElement("div");
+	cardsContainer.classList.add("cards-container");
+	content.appendChild(cardsContainer);
+	
+	/*************** Commands container ***************/
+	
+	const commandsContainer = document.createElement("div");
+	commandsContainer.classList.add("commands-container");
+	content.appendChild(commandsContainer);
 
-    const MenuButoonLeft = document.createElement("button");
-    const divGame = document.createElement("div");
-    const AboutUsRight = document.createElement("button");
+	/*************** Round counter ***************/
+	
+	const roundsCounter = document.createElement("div");
+	roundsCounter.classList.add("command-item", "rounds-counter");
+	commandsContainer.appendChild(roundsCounter);
+	
+	const roundsCounterLabel = document.createElement("span");
+	roundsCounterLabel.textContent = "Round: 0";
+	roundsCounter.appendChild(roundsCounterLabel);
+	
+	/*************** Shuffle ***************/
+	
+	const shuffleWrapper = document.createElement("div");
+	shuffleWrapper.classList.add("command-item", "shuffle-wrapper");
+	commandsContainer.appendChild(shuffleWrapper);
 
-    MenuButoonLeft.classList.add("MenuButoonLeft");
-    divGame.classList.add("divGame");
-    AboutUsRight.classList.add("buttonAboutUs");
+	const shuffleButton = document.createElement("button");
+	shuffleButton.classList.add("shuffle-button");
+	shuffleButton.textContent = "Shuffle";
+	shuffleWrapper.appendChild(shuffleButton);
 
-    divContenu.appendChild(MenuButoonLeft);
-    divContenu.appendChild(divGame);
-    divContenu.appendChild(AboutUsRight);
-
-    const roundsAndShuffle = document.createElement("div");
-    section.appendChild(roundsAndShuffle);
-
-    const divGame1 = document.createElement("div");
-    const divGame2 = document.createElement("div");
-    const divGame3 = document.createElement("div");
-    divGame.appendChild(divGame1);
-    divGame.appendChild(divGame2);
-    divGame.appendChild(divGame3);
-
-    root.replaceChildren(section);
+	/*************** Game ***************/
+	
+	const memory = new Memory(cardsContainer, roundsCounterLabel, shuffleButton);
+	
+	root.replaceChildren(content);
 };
 
 export const memory = {
