@@ -38,7 +38,7 @@ const display = root => {
 
 	/*************** Game ***************/
 	
-	const memory = new Memory(cardsContainer, roundsCounterLabel, shuffleButton);
+	new Memory(cardsContainer, roundsCounterLabel, shuffleButton, 5);
 	
 	root.replaceChildren(content);
 };
