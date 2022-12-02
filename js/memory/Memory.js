@@ -1,76 +1,5 @@
-const categoriesJSON = [
-	{
-		id: 1,
-		name: "Diseases"
-	},
-	{
-		id: 2,
-		name: "Contraceptions"
-	}
-];
-
-const cardsJSON = [
-	{
-		id: 1,
-		categoryId: 1,
-		name: "AIDS",
-		cards: [
-			{
-				"title": "Question AIDS",
-				"content": "This is the content of the question AIDS"
-			},
-			{
-				"title": "Answer AIDS",
-				"content": "This is the content of the answer AIDS"
-			}
-		]
-	},
-	{
-		id: 2,
-		categoryId: 1,
-		name: "Cancer",
-		cards: [
-			{
-				"title": "Question Cancer",
-				"content": "This is the content of the question Cancer"
-			},
-			{
-				"title": "Answer Cancer",
-				"content": "This is the content of the answer Cancer"
-			}
-		]
-	},
-	{
-		id: 3,
-		categoryId: 1,
-		name: "Diabetes",
-		cards: [
-			{
-				"title": "Question Diabetes",
-				"content": "This is the content of the question Diabetes"
-			},
-			{
-				"title": "Answer Diabetes",
-				"content": "This is the content of the answer Diabetes"
-			}
-		]
-	},
-	{
-		id: 4,
-		categoryId: 2,
-		name: "Pill",
-		cards: [
-			{
-				"title": "Question Pill",
-				"content": "This is the content of the question Pill"
-			},
-			{
-				"title": "Answer Pill",
-				"content": "This is the content of the answer Pill"
-			}
-		]
-	}
-];
+import categoriesData from "../../assets/json/categories.json" assert { type: "json" };
+import cardsData from "../../assets/json/cards.json" assert { type: "json" };
 
 export class Memory {
 
@@ -98,21 +27,24 @@ export class Memory {
 
 	#generateCards() {
 		this.#cards = this.#selectCards();
-		this.#container.replaceChildren(...this.#cards);
+		
+		const randomCards = this.#cards.sort(() => Math.random() - 0.5);
+		this.#container.replaceChildren(...randomCards);
+
 		this.#flippedCards = [];
 		this.#counter = 0;
 		this.#rounds = 0;
 		this.#updateUI();
 	}
 
-	#createCardElement(category, id, card) {
+	#createCardElement(category, card, cardContent) {
 		const cardElement = document.createElement("card-custom");
 		
-		cardElement.dataset.id = id;
-		cardElement.setAttribute("identity", "assets/images/sida.svg");
-		cardElement.setAttribute("type", "assets/images/disease.svg");
-		cardElement.setAttribute("title", card.title);
-		cardElement.setAttribute("content", card.content);
+		cardElement.dataset.id = card.id;
+		cardElement.setAttribute("identity", card.icon);
+		cardElement.setAttribute("type", category.icon);
+		cardElement.setAttribute("title", cardContent.title);
+		cardElement.setAttribute("content", cardContent.content);
 		
 		cardElement.addEventListener("click", () => {
 			this.#flipCard(cardElement);
@@ -126,15 +58,15 @@ export class Memory {
 		const indexes = [];
 
 		while (cards.length < this.#nbCards * 2) {
-			const i = Math.floor(Math.random() * cardsJSON.length);
+			const i = Math.floor(Math.random() * cardsData.length);
 			
 			if (!indexes.includes(i)) {
 				indexes.push(i);
-				const card = cardsJSON[i];
-				const category = categoriesJSON.find(category => category.id === card.categoryId);
+				const card = cardsData[i];
+				const category = categoriesData.find(category => category.id === card.category);
 				
-				const questionElement = this.#createCardElement(category, card.id, card.cards[0]);
-				const answerElement = this.#createCardElement(category, card.id, card.cards[1]);
+				const questionElement = this.#createCardElement(category, card, card.cards[0]);
+				const answerElement = this.#createCardElement(category, card, card.cards[1]);
 				
 				cards.push(questionElement, answerElement);
 			}
