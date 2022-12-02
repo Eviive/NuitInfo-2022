@@ -4,7 +4,7 @@
 @use "pages";
 
 .link {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	translate: 0 -50%;
 	padding: 5px;
